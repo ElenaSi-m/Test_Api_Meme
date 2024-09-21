@@ -2,6 +2,7 @@ import requests
 import allure
 import pytest
 from endpoints.endpoint import Endpoint
+from endpoints.meme_user import MemeUser
 
 
 @pytest.mark.usefixtures("cleanup")

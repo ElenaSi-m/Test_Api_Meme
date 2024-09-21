@@ -2,7 +2,7 @@ import pytest
 from endpoints.get_meme import GetMeme
 from endpoints.get_all_meme import GetAllMeme
 from endpoints.create_meme import CreateMeme
-from endpoints.endpoint import MemeUser
+from endpoints.meme_user import MemeUser
 from endpoints.update_meme import UpdateMeme
 from endpoints.delete_meme import DeleteMeme
 
@@ -79,10 +79,11 @@ def data_large_payload():
         "url": "https://example.com/large_image.jpg",
         "tags": ["large", "payload"],
         "info": {
-            "colors": ["red"] * 1000,
-            "objects": ["object"] * 1000
+            "colors": ["red"] * 500,
+            "objects": ["object"] * 500
         }
     }
+
 
 @pytest.fixture()
 def non_existent_id():
